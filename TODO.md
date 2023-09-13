@@ -1,8 +1,15 @@
-[ ] Can I add another library on which one of my externs is dependent?
-[ ] Should I use Fetch for all my libs?
-[ ] If I do, will sublibs be able to use those fetched libs?
+[X] Can I add another library on which one of my externs is dependent?
 
-[ ] Emulate EmbeddedOs & Common
+[X] Emulate EmbeddedOs & Common
+  [X] Emulate EmbeddedOs
+  [X] Add json
+  [X] Use json in EmbeddedOs
+  [X] Use json in main project
+
+# Propagating a library up through projects using CMake
+In this repository, `EmbeddedOs` as an external dependency on `json`. This dependency is propagated back up to the MyCMake project.
+
+As a rule of thumb, it is probably safe to not rely on libraries' owned libraries (e.g. if `json` had an external dependency on `Foo`, the user of `json` should not expect to be able to use `Foo`, as `json` may change or deprecate usage of `Foo` in a future update.) 
 
 
 # Including header files is not sufficient
