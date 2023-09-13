@@ -1,0 +1,6 @@
+[submodule "extern/modern-cmake"]
+	path = extern/modern-cmake
+	url = ../modern-cmake/.git
+[submodule "extern/EmbeddedOs"]
+	path = extern/EmbeddedOs
+	url = ../EmbeddedOs/.git
